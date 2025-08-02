@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './common.css'; 
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -8,6 +9,7 @@ const Register = () => {
   const [confirmPass, setConfirmPass] = useState('');
   const [showPass, setShowPass] = useState(false);
   const [error, setError] = useState('');
+  const navigate=useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
