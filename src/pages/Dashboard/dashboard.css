@@ -1,0 +1,286 @@
+.dashboard-container {
+  padding: 10px 20px;
+  background: radial-gradient(circle at top, #1c1f2a, #11131b);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stats-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #6c63ff;
+}
+
+.card ul {
+  padding-left: 1rem;
+  margin: 0;
+  color: #ccc;
+}
+
+.leaderboard {
+  flex: 2;
+  overflow-x: auto;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.leaderboard-table th {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ccc;
+}
+
+.chart-section {
+  margin-top: 3rem;
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-buttons button {
+  padding: 0.5rem 1.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.toggle-buttons button:hover {
+  background: #e402e4;
+}
+
+.toggle-buttons .active {
+  background: #6c63ff;
+  color: white;
+}
+
+.filter-bar {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.pagination-controls {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.pagination-controls button {
+  padding: 0.4rem 1rem;
+  margin: 0 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.chart-container {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.recharts-tooltip-wrapper {
+  max-width: 100%;
+  white-space: nowrap;
+}
+.filter-bar select {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  appearance: none;
+  backdrop-filter: blur(8px);
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filter-bar select:focus {
+  border: 1px solid #6c63ff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.filter-bar option {
+  background: #1c1f2a;
+  color: #fff;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color:whitesmoke;
+  margin: 2rem 0 1rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+.stats-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .top-section {
+    flex-direction: column;
+  }
+
+  .leaderboard,
+  .stats-wrapper {
+    width: 100%;
+  }
+
+  .chart-container {
+    padding: 0 10px;
+  }
+
+  .toggle-buttons,
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .toggle-buttons button,
+  .pagination-controls button,
+  .filter-bar select {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card p {
+    font-size: 1.2rem;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .toggle-buttons button {
+    font-size: 0.9rem;
+  }
+
+  .pagination-controls button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+
+  .dashboard-title {
+    font-size: 1.7rem;
+  }
+
+  .section-heading {
+    font-size: 1.4rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .leaderboard-table {
+    font-size: 0.85rem;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .pagination-controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

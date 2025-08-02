@@ -1,0 +1,126 @@
+/* Reset & font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1c1f2a, #11131b);
+  color: #fff;
+}
+
+/* Centered container */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card styling */
+.login-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Title */
+.login-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #fff;
+}
+
+/* Inputs */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.input-group input:focus {
+  border-bottom-color: #6c63ff;
+}
+.input-group label {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: #ccc;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -10px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* Toggle password visibility */
+.toggle-pass {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: #ccc;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  background: #6c63ff;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.login-btn:hover {
+  background: #574fd6;
+}
+
+/* Footer link */
+.login-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+.login-footer a {
+  color: #6c63ff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.login-footer a:hover {
+  color: #8a80ff;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
