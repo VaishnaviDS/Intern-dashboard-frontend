@@ -204,7 +204,7 @@ const Dashboard = () => {
           ) : (
 <ResponsiveContainer width="100%" height={300}>
   <LineChart
-    key={`${viewMode}-${month}-${year}`}
+    // key={`${viewMode}-${month}-${year}`}
     data={paginatedData}
     margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
   >
