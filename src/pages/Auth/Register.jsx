@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './common.css'; 
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom'
 const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -67,7 +67,7 @@ const Register = () => {
 
         <button className="login-btn" type="submit">Register</button>
 
-        <p className="login-footer">Already have an account? <a href="/login">Login</a></p>
+        <p className="login-footer">Already have an account? <Link to="/login">Login</Link></p>
       </form>
     </div>
   );
